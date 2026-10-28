@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sweet Moment | Premium Bakery</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- YOUR CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">The Sweet Moment</div>
+        <div class="nav-links">
+            <a href="#menu" class="nav-link-btn">Menu</a>
+            <a href="#custom" class="nav-link-btn">Custom Orders</a>
+            <a href="#location" class="nav-link-btn">Location</a>
+            <a href="#" class="nav-btn" onclick="openCheckout(event)">Order Now</a> 
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <header class="hero">
+        <div class="slide active" style="background-image: url('images/cake 1.jpg');"></div>
+        <div class="slide" style="background-image: url('images/cake 6.jpeg');"></div>
+        <div class="slide" style="background-image: url('images/tart.jpg');"></div>
+        
+        <div class="hero-content">
+            <h1>Every Bite is a Sweet Moment.</h1>
+            <p>Premium custom cakes, pastries, and treats baked fresh daily.</p>
+            <a href="#menu" class="main-btn">Explore Our Menu</a>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu hidden">
+        <h2>Our Signature Treats</h2>
+        <div class="menu-grid">
+            
+            <div class="menu-item" onclick="orderSpecificCake('Chocolate Fudge Cake')">
+                <img src="images/cake 1.jpg" alt="Chocolate Cake">
+                <h3>Chocolate Fudge Cake</h3>
+                <p>Rich, moist, and perfect for celebrations.</p>
+                <span class="price">Ksh 2,500</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('Vanilla Cupcakes (6)')">
+                <img src="images/cake 2.jpg" alt="Vanilla Cupcakes">
+                <h3>Vanilla Cupcakes (6)</h3>
+                <p>Classic vanilla with silky buttercream frosting.</p>
+                <span class="price">Ksh 1,200</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('Red Velvet Slices')">
+                <img src="images/cake 3.jpg" alt="Red Velvet">
+                <h3>Red Velvet Slices</h3>
+                <p>Velvety smooth with cream cheese frosting.</p>
+                <span class="price">Ksh 800</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('Custom Wedding Cake')">
+                <img src="images/cake 4.jpg" alt="Wedding Cake">
+                <h3>Custom Wedding Cake</h3>
+                <p>Elegant tiered cakes for your special day.</p>
+                <span class="price">From Ksh 10,000</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('Lemon Drizzle Loaf')">
+                <img src="images/cake 5.jpeg" alt="Lemon Drizzle">
+                <h3>Lemon Drizzle Loaf</h3>
+                <p>Zesty, sweet, and perfectly crumbly.</p>
+                <span class="price">Ksh 1,500</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('Spiced Carrot Cake')">
+                <img src="images/cake 6.jpeg" alt="Carrot Cake">
+                <h3>Spiced Carrot Cake</h3>
+                <p>Topped with crushed walnuts and cream cheese.</p>
+                <span class="price">Ksh 2,200</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('New York Cheesecake')">
+                <img src="images/cake 7.jpeg" alt="Cheesecake">
+                <h3>New York Cheesecake</h3>
+                <p>Classic baked cheesecake with a berry compote.</p>
+                <span class="price">Ksh 2,800</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('French Macarons (Box of 6)')">
+                <img src="images/cake 8.jpeg" alt="Macarons">
+                <h3>French Macarons (Box of 6)</h3>
+                <p>Assorted delicate and chewy macarons.</p>
+                <span class="price">Ksh 1,800</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('Fudge Brownies (4)')">
+                <img src="images/cake 9.jpeg" alt="Brownies">
+                <h3>Fudge Brownies (4)</h3>
+                <p>Ultra-rich, gooey chocolate brownies.</p>
+                <span class="price">Ksh 1,000</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('Classic Birthday Cake')">
+                <img src="images/cake 10.jpg" alt="Birthday Cake">
+                <h3>Classic Birthday Cake</h3>
+                <p>Custom colors and messages available.</p>
+                <span class="price">From Ksh 3,500</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('Cinnamon Rolls (4)')">
+                <img src="images/cinammon rolls.jpg" alt="Cinnamon Rolls">
+                <h3>Cinnamon Rolls (4)</h3>
+                <p>Warm, gooey, with a vanilla glaze.</p>
+                <span class="price">Ksh 1,200</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+            
+            <div class="menu-item" onclick="orderSpecificCake('Fresh Fruit Tart')">
+                <img src="images/tart.jpg" alt="Fruit Tart">
+                <h3>Fresh Fruit Tart</h3>
+                <p>Crispy pastry, vanilla custard, and fresh fruit.</p>
+                <span class="price">Ksh 2,000</span>
+                <div class="order-text-btn">Order This Cake</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Split Section: Custom Request & Location -->
+    <section class="contact-section hidden">
+        
+        <div id="custom" class="contact-form">
+            <h2>Request a Custom Cake</h2>
+            <p style="margin-bottom: 20px; color: #666;">Tell us your vision, and we'll bake it to life.</p>
+            <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST"> 
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="occasion" placeholder="Occasion (e.g., Birthday, Wedding)">
+                <textarea name="description" placeholder="Describe the cake you want (flavors, colors, theme, etc.)" required></textarea>
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </div>
+
+        <div id="location" class="location">
+            <h2>Find Us</h2>
+            <p class="location-info"><i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> Nairobi, Kenya (Exact location TBD)</p>
+            <p class="location-info"><i class="fas fa-clock" style="color: var(--accent);"></i> Open Daily: 9:00 AM - 6:00 PM</p>
+            <p class="location-info"><i class="fas fa-phone" style="color: var(--accent);"></i> +254 700 000 000</p>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.207198201107!2d36.806501999999995!3d-1.2920659999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d5e5f00001%3A0x7b56b6b5b5b5b5b5!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Sweet Moment. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254XXXXXXXXX" class="floating-wa" target="_blank"> 
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========================================== -->
+    <!-- THE CHECKOUT MODAL (THIS WAS MISSING!)     -->
+    <!-- ========================================== -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCheckout()">&times;</span>
+            <h2 style="text-align: center; margin-bottom: 20px;">Complete Your Order</h2>
+            
+            <div class="payment-tabs">
+                <button class="pay-tab active" onclick="switchPayment('mpesa', event)">M-Pesa</button>
+                <button class="pay-tab" onclick="switchPayment('card', event)">Credit/Debit Card</button>
+            </div>
+
+            <form id="payment-form" onsubmit="processPayment(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number / Email</label>
+                    <input type="text" placeholder="0712 345 678" required>
+                </div>
+                <div class="form-group">
+                    <label>Delivery Address</label>
+                    <input type="text" placeholder="Apartment, Street, Area" required>
+                </div>
+                <div class="form-group">
+                    <label>Order Details</label>
+                    <input type="text" id="order-details" placeholder="What would you like to order?" required>
+                </div>
+
+                <div id="mpesa-section">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">You will receive an STK push on your phone to complete payment.</p>
+                </div>
+
+                <div id="card-section" style="display: none;">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" placeholder="0000 0000 0000 0000">
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label>Expiry</label>
+                            <input type="text" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label>CVV</label>
+                            <input type="text" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" style="margin-top: 20px;">Pay Now</button>
+                <p style="text-align: center; font-size: 0.8rem; color: #888; margin-top: 15px;"><i class="fas fa-lock"></i> Secure Checkout</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for Animations & Checkout -->
+    <script>
+        // --- SLIDER LOGIC ---
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 4000);
+
+        // --- SCROLL ANIMATION LOGIC ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        // --- CHECKOUT MODAL LOGIC ---
+        function openCheckout(event) {
+            if(event) event.preventDefault();
+            document.getElementById('checkout-modal').style.display = 'flex';
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').style.display = 'none';
+        }
+
+        // --- CLICK-TO-ORDER LOGIC ---
+        function orderSpecificCake(cakeName) {
+            document.getElementById('order-details').value = "1x " + cakeName;
+            document.getElementById('checkout-modal').style.display = 'flex';
+        }
+
+        function switchPayment(type, event) {
+            document.querySelectorAll('.pay-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if(type === 'mpesa') {
+                document.getElementById('mpesa-section').style.display = 'block';
+                document.getElementById('card-section').style.display = 'none';
+            } else {
+                document.getElementById('mpesa-section').style.display = 'none';
+                document.getElementById('card-section').style.display = 'block';
+            }
+        }
+
+        function processPayment(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            
+            btn.innerText = "Processing...";
+            btn.style.opacity = "0.7";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert("🎉 Payment Successful! Your order has been placed. (This is a mockup demo).");
+                closeCheckout();
+                btn.innerText = originalText;
+                btn.style.opacity = "1";
+                btn.disabled = false;
+                event.target.reset(); 
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
